@@ -4,7 +4,9 @@ import numpy as np
 
 list_of_modules = ['discriminant_analysis', 'discriminant_analysis', 'tree']
 
-list_of_classifiers =['LinearDiscriminantAnalysis', 'QuadraticDiscriminantAnalysis', 'DecisionTreeClassifier']
+list_of_classifiers = ['LinearDiscriminantAnalysis',
+                       'QuadraticDiscriminantAnalysis', 'DecisionTreeClassifier']
+
 
 def train(mod, classifier, data, labels, **kwargs):
     '''Trains the classifier from mod of sklearn
@@ -21,6 +23,7 @@ def train(mod, classifier, data, labels, **kwargs):
 
     return clf
 
+
 def predict(clf, data):
     '''Predict label for data for the trained classifier clf.
        Returns the index of the predicted class
@@ -30,8 +33,9 @@ def predict(clf, data):
 
     return predict_label[0]
 
+
 def classify_cell_in_groups(list_of_groups=['L5_UTPC', 'L5_STPC', 'L5_TTPC1', 'L5_TTPC2'],
-                            cell_to_classify='./L5_TTPC1/C030796A-P3.h5',
+                            cell_to_classify='02a_pyramidal2aFI.CNG.swc',
                             neurite_type='apical',
                             classifier_module=list_of_modules[0],
                             classifier_method=list_of_classifiers[0],
@@ -41,10 +45,10 @@ def classify_cell_in_groups(list_of_groups=['L5_UTPC', 'L5_STPC', 'L5_TTPC1', 'L
     # Load all data from selected folders
     groups = [tmd.io.load_population(l) for l in list_of_groups]
     # Define labels depending on the number of neurons in each folder
-    labels = [i+1 for i,k in enumerate(groups) for j in k.neurons]
+    labels = [i + 1 for i, k in enumerate(groups) for j in k.neurons]
     # Generate a persistence diagram per neuron
     pers_diagrams = [tmd.methods.get_ph_neuron(j, neurite_type=neurite_type)
-                     for i,k in enumerate(groups) for j in k.neurons]
+                     for i, k in enumerate(groups) for j in k.neurons]
     # Define x-ylimits
     xlims, ylims = tmd.analysis.define_limits(pers_diagrams)
     # Generate a persistence image for each diagram
@@ -71,7 +75,10 @@ def classify_cell_in_groups(list_of_groups=['L5_UTPC', 'L5_STPC', 'L5_TTPC1', 'L
         # Test classifier with test image and return predictions
         predict_labels.append(predict(clf, test_dataset))
 
-    percentages = {groups[i-1].name: np.float(len(np.where(np.array(predict_labels) == i)[0])) / len(predict_labels)
+    percentages = {groups[i - 1].name: np.float(len(np.where(np.array(predict_labels) == i)[0])) / len(predict_labels)
                    for i in np.unique(labels)}
 
     return percentages
+
+
+classify_cell_in_groups()

@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Step 2: Load your morphology
-filename = '../tests/data/valid/C010398B-P2.CNG.swc'
+filename = '02a_pyramidal2aFI.CNG.swc'
 neu = tmd.io.load_neuron(filename)
 
 # Step 3: Extract the ph diagram of a tree

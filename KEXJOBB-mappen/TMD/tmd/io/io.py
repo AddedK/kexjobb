@@ -91,8 +91,8 @@ def load_neuron(input_file, line_delimiter='\n', soma_type=None,
     # return p, soma_ids
     try:
         dA = sp.csr_matrix((_np.ones(len(p) - len(soma_ids)),
-                           (range(len(soma_ids), len(p)),
-                            p[len(soma_ids):])), shape=(len(p), len(p)))
+                            (range(len(soma_ids), len(p)),
+                             p[len(soma_ids):])), shape=(len(p), len(p)))
     except Exception:
         raise LoadNeuronError('Cannot create connectivity, nodes not connected correctly.')
 
@@ -114,9 +114,11 @@ def load_population(neurons, tree_types=None, name=None):
        Takes as input a directory or a list of files to load.
     '''
     if isinstance(neurons, (list, tuple)):
+        print("first if")
         files = neurons
         name = name if name is not None else 'Population'
     elif os.path.isdir(neurons):  # Assumes given input is a directory
+        print("in elif")
         files = [os.path.join(neurons, l) for l in os.listdir(neurons)]
         name = name if name is not None else os.path.basename(neurons)
 
