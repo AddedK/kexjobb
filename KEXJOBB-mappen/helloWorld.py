@@ -7,37 +7,47 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 
+directory = './basket_swc/'
+
+tot_files = 0
+ok_files = 0
+for file in os.listdir(directory):
+
+    if file.endswith(".swc") :
+        tot_files += 1
+        try:
+            #Load your morphology
+            neu = tmd.io.load_neuron(directory + file)
+
+        except :
+            continue
+        else :
+            #plt.show(view.neuron(neu))
+            ok_files += 1
+            continue
+    else:
+        continue
+
+print("tot " + str(tot_files))
+print("ok " + str(ok_files))
+            
+
 
 """
-import os
-
-for subdir, dirs, files in os.walk(rootdir):
-    for file in files:
-        #print os.path.join(subdir, file)
-        filepath = subdir + os.sep + file
-
-        if filepath.endswith(".swc"):
-            print (filepath)
-            
-            """
-
 
 directory = './purkinje/'
 
 for file in os.listdir(directory):
 
-
     if file.endswith(".swc") :
-        try:
-            #Load your morphology
-            neu = tmd.io.load_neuron(directory + file)
-        except :
-            continue
-        else :
-            plt.show(view.neuron(neu))
-            continue
+        #Load your morphology
+        neu = tmd.io.load_neuron(directory + file)
+        plt.show(view.neuron(neu))
+        continue
     else:
         continue
+        
+        """
 
 """
 
