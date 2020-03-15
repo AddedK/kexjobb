@@ -1,4 +1,6 @@
-#!/home/added/kth/thirdyear/kexjobb/KEXJOBB-mappen/test_tmd/bin/python
+#!/bin/sh
+'''exec' "/Users/Sabrina/Desktop/KTH kurser/kexjobb/KEXJOBB-mappen/test_tmd/bin/python" "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys
