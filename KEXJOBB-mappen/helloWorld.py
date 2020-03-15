@@ -22,15 +22,26 @@ for subdir, dirs, files in os.walk(rootdir):
             """
 
 
-for filename in os.listdir(directory):
-    if filename.endswith(".asm") or filename.endswith(".py"):
-         # print(os.path.join(directory, filename))
-        continue
+directory = './purkinje/'
+
+for file in os.listdir(directory):
+
+
+    if file.endswith(".swc") :
+        try:
+            #Load your morphology
+            neu = tmd.io.load_neuron(directory + file)
+        except :
+            continue
+        else :
+            plt.show(view.neuron(neu))
+            continue
     else:
         continue
 
+"""
 
-# Step 2: Load your morphology
+ # Step 2: Load your morphology
 filename = '02a_pyramidal2aFI.CNG.swc'
 neu = tmd.io.load_neuron(filename)
 
@@ -68,3 +79,4 @@ plt.show(plot.barcode(ph_apical))
 # Visualize the persistence image
 plt.show(plot.persistence_image(ph_neu))
 
+"""
