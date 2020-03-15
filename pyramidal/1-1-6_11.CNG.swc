@@ -1,0 +1,75 @@
+# SWC to SWC conversion from L-Measure. Sridevi Polavaram: spolavar@gmu.edu
+# Original fileName:C:\postprocessing\Buffo_Final\Source_Temp1//1-1-6_11.AP2.swc
+#
+# SWC to SWC conversion from L-Measure. Sridevi Polavaram: spolavar@gmu.edu
+# Original fileName:C:\NMO_dev\data_proc\Auto swc//1-1-6_11.dat.asc.swc.CNG.swc
+#
+# Original file C:\NMO_dev\data_proc\Temp_LMeasure\1-1-6_11.dat.asc.swc edited using StdSwc version 1.31 on 7/27/17.
+# Irregularities and fixes documented in C:\NMO_dev\data_proc\Temp_LMeasure\1-1-6_11.dat.asc.swc.std.  See StdSwc1.31.doc for more information.
+#
+# Neurolucida to SWC conversion from L-Measure. Sridevi Polavaram: spolavar@gmu.edu
+# Original fileName:C:\NMO_dev\data_proc\Source_Temp1//1-1-6_11.dat.asc
+#The original file has no soma
+# NEUROMANTIC V1.6.3 (8/1/2017 1:32:23 PM): Saved to 1-1-6_11.AP.swc
+# ORIGINAL_SOURCE 
+# CREATURE 
+# REGION 
+# FIELD/LAYER 
+# TYPE 
+# CONTRIBUTOR 
+# REFERENCE 
+# RAW 
+# EXTRAS 
+# SOMA_AREA 
+# SHRINKAGE_CORRECTION 
+# VERSION_NUMBER 
+# VERSION_DATE 
+# ********************************************* 
+# SCALE 1.0 1.0 1.0 
+ 1 2 0 0 0 0.09 -1
+ 2 2 1.23 4.68 0 0.09 1
+ 3 2 3.06 7.21 0 0.09 2
+ 4 2 4.67 11.43 0 0.09 3
+ 5 2 5.84 14.62 0 0.09 4
+ 6 2 7.08 18.64 0 0.09 5
+ 7 2 7.42 21.91 0 0.09 6
+ 8 2 5.71 26.08 0 0.09 7
+ 9 2 4.9 27.9 0 0.09 8
+ 10 2 4.04 29.32 0 0.09 9
+ 11 2 6.5 32.12 0 0.09 10
+ 12 2 8.97 33.61 0 0.09 11
+ 13 2 14.76 43.04 0 0.09 12
+ 14 2 13.44 49.56 0 0.09 13
+ 15 2 16.66 57.34 0 0.09 14
+ 16 2 13.88 67.4 0 0.09 15
+ 17 2 13.91 68.47 0 0.09 16
+ 18 2 9.22 71.04 0 0.09 17
+ 19 2 5.88 74.04 0 0.09 18
+ 20 2 4.71 76.32 0 0.09 19
+ 21 2 3.84 78.39 0 0.09 20
+ 22 2 3.99 86.83 0 0.09 21
+ 23 2 2.52 95.19 0 0.09 22
+ 24 2 -0.86 102.2 0 0.09 23
+ 25 2 -0.59 111.2 0 0.09 24
+ 26 2 0.49 113.99 0 0.09 25
+ 27 2 -0.69 76.05 0 0.09 21
+ 28 2 -1.69 75.17 0 0.09 27
+ 29 2 -3.12 72.59 0 0.09 28
+ 30 2 -3.99 70.53 0 0.09 29
+ 31 2 -4.25 69.8 0 0.09 30
+ 32 2 15.5 70.96 0 0.09 17
+ 33 2 18.09 71.94 0 0.09 32
+ 34 2 24.29 77.17 0 0.09 33
+ 35 2 19.5 43.29 0 0.09 13
+ 36 2 21.44 43.58 0 0.09 35
+ 37 2 29.37 43.32 0 0.09 36
+ 38 2 27.55 49.73 0 0.09 36
+ 39 2 17.26 35.97 0 0.09 12
+ 40 2 16.63 29.15 0 0.09 11
+ 41 2 0.98 31.7 0 0.09 10
+ 42 2 -1.82 34.18 0 0.09 41
+ 43 2 -4.33 35.35 0 0.09 42
+ 44 2 -10.43 38.13 0 0.09 43
+ 45 2 -14.32 39.94 0 0.09 44
+ 46 2 -17.77 41.71 0 0.09 45
+ 47 2 -19.52 41.74 0 0.09 46

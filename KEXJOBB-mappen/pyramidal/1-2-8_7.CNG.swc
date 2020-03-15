@@ -1,0 +1,91 @@
+# SWC to SWC conversion from L-Measure. Sridevi Polavaram: spolavar@gmu.edu
+# Original fileName:C:\postprocessing\Buffo_Final\Source_Temp1//1-2-8_7.AP2.swc
+#
+# SWC to SWC conversion from L-Measure. Sridevi Polavaram: spolavar@gmu.edu
+# Original fileName:C:\NMO_dev\data_proc\Auto swc//1-2-8_7.dat.asc.swc.CNG.swc
+#
+# Original file C:\NMO_dev\data_proc\Temp_LMeasure\1-2-8_7.dat.asc.swc edited using StdSwc version 1.31 on 7/27/17.
+# Irregularities and fixes documented in C:\NMO_dev\data_proc\Temp_LMeasure\1-2-8_7.dat.asc.swc.std.  See StdSwc1.31.doc for more information.
+#
+# Neurolucida to SWC conversion from L-Measure. Sridevi Polavaram: spolavar@gmu.edu
+# Original fileName:C:\NMO_dev\data_proc\Source_Temp1//1-2-8_7.dat.asc
+#The original file has no soma
+# NEUROMANTIC V1.7.5 (8/10/2017 2:18:33 PM): Saved to 1-2-8_7.AP.swc
+# ORIGINAL_SOURCE 
+# CREATURE 
+# REGION 
+# FIELD/LAYER 
+# TYPE 
+# CONTRIBUTOR 
+# REFERENCE 
+# RAW 
+# EXTRAS 
+# SOMA_AREA 
+# SHRINKAGE_CORRECTION 
+# VERSION_NUMBER 
+# VERSION_DATE 
+# ********************************************* 
+# SCALE 1.0 1.0 1.0 
+ 1 2 0 0 0 0.09 -1
+ 2 2 -2.86 5.2 0 0.09 1
+ 3 2 -3.09 10.15 0 0.09 2
+ 4 2 0.25 17.19 0 0.09 3
+ 5 2 4.09 23.33 0 0.09 4
+ 6 2 -3.3 30.83 0 0.09 5
+ 7 2 -7.29 38.16 0 0.09 6
+ 8 2 -7.03 53.89 0 0.09 7
+ 9 2 -8.95 59.99 0 0.09 8
+ 10 2 -11.5 64.72 0 0.09 9
+ 11 2 -15.78 72.29 0 0.09 10
+ 12 2 -22.15 74.41 0 0.09 11
+ 13 2 -27.53 75.7 0 0.09 12
+ 14 2 -33.28 73.04 0 0.09 13
+ 15 2 -38.35 68.6 0 0.09 14
+ 16 2 -45.06 70.28 0 0.09 15
+ 17 2 -54.64 71.69 0 0.09 16
+ 18 2 -61.63 72.18 0 0.09 17
+ 19 2 -70.09 73.16 0 0.09 18
+ 20 2 -29.12 78.68 0 0.09 13
+ 21 2 -28.93 83.29 0 0.09 20
+ 22 2 -25.17 87.59 0 0.09 21
+ 23 2 -21.98 92.37 0 0.09 22
+ 24 2 -23.21 95.51 0 0.09 23
+ 25 2 -27.63 99.13 0 0.09 24
+ 26 2 -22.13 76.75 0 0.09 12
+ 27 2 -20.64 78.86 0 0.09 26
+ 28 2 -17.81 79.43 0 0.09 27
+ 29 2 -15.84 79.48 0 0.09 28
+ 30 2 -15.99 76.99 0 0.09 11
+ 31 2 -13.1 80.81 0 0.09 30
+ 32 2 -9.41 85.88 0 0.09 31
+ 33 2 -8.59 86.88 0 0.09 32
+ 34 2 -4.97 89.86 0 0.09 33
+ 35 2 -5.27 95.6 0 0.09 34
+ 36 2 -2.88 100.59 0 0.09 35
+ 37 2 -0.6 103.89 0 0.09 36
+ 38 2 -1.2 108.69 0 0.09 37
+ 39 2 -1.62 112.89 0 0.09 38
+ 40 2 -1.33 117.89 0 0.09 39
+ 41 2 -2.02 122.29 0 0.09 40
+ 42 2 -1.1 126.29 0 0.09 41
+ 43 2 0.25 130.9 0 0.09 42
+ 44 2 1.37 134.3 0 0.09 43
+ 45 2 7.42 78.27 0 0.09 34
+ 46 2 -10.72 89.8 0 0.09 33
+ 47 2 -11.59 93.14 0 0.09 46
+ 48 2 -13.09 93.89 0 0.09 47
+ 49 2 -16.01 94.4 0 0.09 48
+ 50 2 -18.14 93.28 0 0.09 49
+ 51 2 -18.62 92.7 0 0.09 50
+ 52 2 -16.48 85.7 0 0.09 31
+ 53 2 -17.1 88.14 0 0.09 52
+ 54 2 -20.39 92.26 0 0.09 53
+ 55 2 -23.1 94.47 0 0.09 54
+ 56 2 -30.63 95.17 0 0.09 55
+ 57 2 -14.88 89.41 0 0.09 53
+ 58 2 -12.99 90.25 0 0.09 57
+ 59 2 -11.74 94.69 0 0.09 58
+ 60 2 -12.18 96.49 0 0.09 59
+ 61 2 -14.25 39.56 0 0.09 7
+ 62 2 -12.8 45.99 0 0.09 61
+ 63 2 -23.48 42.83 0 0.09 61

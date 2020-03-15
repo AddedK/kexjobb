@@ -1,0 +1,61 @@
+# SWC to SWC conversion from L-Measure. Sridevi Polavaram: spolavar@gmu.edu
+# Original fileName:C:\postprocessing\Buffo_Final\Source_Temp1//1-1-9_9.AP2.swc
+#
+# SWC to SWC conversion from L-Measure. Sridevi Polavaram: spolavar@gmu.edu
+# Original fileName:C:\NMO_dev\data_proc\Auto swc//1-1-9_9.dat.asc.swc.CNG.swc
+#
+# Original file C:\NMO_dev\data_proc\Temp_LMeasure\1-1-9_9.dat.asc.swc edited using StdSwc version 1.31 on 7/27/17.
+# Irregularities and fixes documented in C:\NMO_dev\data_proc\Temp_LMeasure\1-1-9_9.dat.asc.swc.std.  See StdSwc1.31.doc for more information.
+#
+# Neurolucida to SWC conversion from L-Measure. Sridevi Polavaram: spolavar@gmu.edu
+# Original fileName:C:\NMO_dev\data_proc\Source_Temp1//1-1-9_9.dat.asc
+#The original file has no soma
+# NEUROMANTIC V1.7.5 (8/2/2017 1:47:49 PM): Saved to 1-1-9_9.AP.swc
+# ORIGINAL_SOURCE 
+# CREATURE 
+# REGION 
+# FIELD/LAYER 
+# TYPE 
+# CONTRIBUTOR 
+# REFERENCE 
+# RAW 
+# EXTRAS 
+# SOMA_AREA 
+# SHRINKAGE_CORRECTION 
+# VERSION_NUMBER 
+# VERSION_DATE 
+# ********************************************* 
+# SCALE 1.0 1.0 1.0 
+ 1 2 0 0 0 0.09 -1
+ 2 2 0.28 10.52 0 0.09 1
+ 3 2 1.45 17.75 0 0.09 2
+ 4 2 1.83 22.2 0 0.09 3
+ 5 2 2.18 25.32 0 0.09 4
+ 6 2 2.83 28.22 0 0.09 5
+ 7 2 3.38 34.54 0 0.09 6
+ 8 2 3.63 38.17 0 0.09 7
+ 9 2 4.1 57.08 0 0.09 8
+ 10 2 6.04 77.44 0 0.09 9
+ 11 2 4.23 87.18 0 0.09 10
+ 12 2 6.35 99.37 0 0.09 11
+ 13 2 6.81 103.3 0 0.09 12
+ 14 2 7.37 109.6 0 0.09 13
+ 15 2 7.17 113.6 0 0.09 14
+ 16 2 7.15 119.4 0 0.09 15
+ 17 2 6.96 124.7 0 0.09 16
+ 18 2 7.15 134.4 0 0.09 17
+ 19 2 8.32 143.8 0 0.09 18
+ 20 2 9.85 151.3 0 0.09 19
+ 21 2 -3.16 90.03 0 0.09 11
+ 22 2 -14.84 89.35 0 0.09 21
+ 23 2 -4.09 101.99 0 0.09 21
+ 24 2 -12.77 94.63 0 0.09 23
+ 25 2 -4.11 102.29 0 0.09 23
+ 26 2 18.18 79.15 0 0.09 10
+ 27 2 8.21 57.83 0 0.09 9
+ 28 2 15.32 55.17 0 0.09 27
+ 29 2 15.63 61.46 0 0.09 27
+ 30 2 10.23 38.34 0 0.09 8
+ 31 2 12.01 40.93 0 0.09 30
+ 32 2 17.03 43.03 0 0.09 31
+ 33 2 10.9 46.15 0 0.09 31
