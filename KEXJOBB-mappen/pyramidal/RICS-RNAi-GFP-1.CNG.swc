@@ -1,0 +1,20 @@
+# Original file RICS-RNAi-GFP-1.swc edited using StdSwc version 1.31 on 7/17/12.
+# Irregularities and fixes documented in RICS-RNAi-GFP-1.swc.std.  See StdSwc1.31.doc for more information.
+#
+# Neurolucida to SWC conversion from L-Measure. Sridevi Polavaram: spolavar@gmu.edu
+# Original fileName:C:\Users\praveen\Desktop\Juhi\Current_Archives\Processing\Long\ASC\RICS-RNAi-GFP-1.asc
+#The original file has a single soma contour that is averaged into 3 soma points
+1 1 70.18 -139.61 -3.71 5.7256 -1
+2 1 70.18 -145.34 -3.71 5.7256 1
+3 1 70.18 -133.89 -3.71 5.7256 1
+4 3 72.56 -133.72 -6.2 0.15 1
+5 3 71.36 -118.71 -6.2 0.15 4
+6 3 72.56 -101.91 -4.96 0.15 5
+7 3 76.45 -94.41 -4.96 0.15 6
+8 3 79.76 -84.8 -4.96 0.15 7
+9 3 80.06 -84.2 -4.96 0.15 8
+10 3 85.46 -79.7 -4.96 0.15 9
+11 3 86.06 -78.5 -4.96 0.15 10
+12 3 87.87 -77.3 -4.96 0.15 11
+13 3 90.87 -74.0 -4.96 0.15 12
+14 3 62.36 -89.61 -6.2 0.15 6

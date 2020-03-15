@@ -1,0 +1,19 @@
+# Original file Myosin9b-RNAiGFP-1.swc edited using StdSwc version 1.31 on 7/17/12.
+# Irregularities and fixes documented in Myosin9b-RNAiGFP-1.swc.std.  See StdSwc1.31.doc for more information.
+#
+# Neurolucida to SWC conversion from L-Measure. Sridevi Polavaram: spolavar@gmu.edu
+# Original fileName:C:\Users\praveen\Desktop\Juhi\Current_Archives\Processing\Long\ASC\Myosin9b-RNAiGFP-1.asc
+#The original file has a single soma contour that is averaged into 3 soma points
+1 1 27.51 -87.15 -9.92 6.08189 -1
+2 1 27.51 -93.23 -9.92 6.08189 1
+3 1 27.51 -81.07 -9.92 6.08189 1
+4 3 27.98 -80.18 -9.92 0.135 1
+5 3 28.53 -63.98 -9.92 0.135 4
+6 3 35.62 -54.52 -9.92 0.135 5
+7 3 35.95 -54.09 -9.92 0.135 6
+8 3 36.22 -53.82 -9.92 0.135 7
+9 3 40.61 -48.6 -9.92 0.135 8
+10 3 32.1 -50.24 -9.92 0.135 6
+11 3 31.83 -40.08 -9.92 0.135 10
+12 3 29.08 -30.19 -9.92 0.135 11
+13 3 24.14 -44.75 -9.92 0.135 5
