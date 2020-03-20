@@ -1,0 +1,42 @@
+# SWC to SWC conversion from L-Measure. Sridevi Polavaram: spolavar@gmu.edu
+# Original fileName:C:\test3\Auto swc//1442-1_3_4_NAc-9.asc.swc.CNG.swc
+#
+# Original file C:\test3\Temp_LMeasure\1442-1_3_4_NAc-9.asc.swc edited using StdSwc version 1.31 on 11/16/16.
+# Irregularities and fixes documented in C:\test3\Temp_LMeasure\1442-1_3_4_NAc-9.asc.swc.std.  See StdSwc1.31.doc for more information.
+#
+# Neurolucida to SWC conversion from L-Measure. Sridevi Polavaram: spolavar@gmu.edu
+# Original fileName:C:\test3\Source_Temp1//1442-1_3_4_NAc-9.asc
+#The original file has a single soma contour that is averaged into 3 soma points
+ 1 1 0 0 0 7.46576 -1
+ 2 1 -5.47 -4.99 -0.82 7.46576 1
+ 3 1 5.48 5 0.82 7.46576 1
+ 4 3 -1.29 8.22 2.27 0.05 1
+ 5 3 -1.95 10.59 1.45 0.05 4
+ 6 3 -4.4 13.42 0.54 0.05 5
+ 7 3 -7.92 14.11 3.13 0.05 6
+ 8 3 -10.17 14.24 5.38 0.05 7
+ 9 3 -12.11 13.21 6.14 0.05 8
+ 10 3 -6.66 16.27 -2.58 0.05 6
+ 11 3 -8.8 17.28 -2.72 0.05 10
+ 12 3 -10.32 16.69 -5.69 0.05 11
+ 13 3 -11.41 15.11 -7.25 0.05 12
+ 14 3 -12.63 12.97 -9.31 0.05 13
+ 15 3 -13.59 10.7 -11.29 0.05 14
+ 16 3 -14.62 8.26 -11.8 0.05 15
+ 17 3 -16.21 5.74 -11.94 0.05 16
+ 18 3 -7.12 20.76 -2.79 0.05 10
+ 19 3 -8.07 23.11 -3.27 0.05 18
+ 20 3 -10.37 23.62 -3.22 0.05 19
+ 21 3 -13 24.36 -5.03 0.05 20
+ 22 3 -16.59 25 -0.58 0.05 21
+ 23 3 -18.79 24.65 -0.48 0.05 22
+ 24 3 -22.3 23.47 0.55 0.05 23
+ 25 3 -25.26 22.32 2.34 0.05 24
+ 26 3 -27.31 21.58 2.98 0.05 25
+ 27 3 -7.96 25.51 -4.73 0.05 19
+ 28 3 -6.87 28.01 -4.15 0.05 27
+ 29 3 -5.49 29.62 -1.93 0.05 28
+ 30 3 -2.62 30.11 0.92 0.05 29
+ 31 3 -6.78 31.41 -5.89 0.05 28
+ 32 3 -4.83 35.19 -5.8 0.05 31
+ 33 3 -2.68 39.81 -5.76 0.05 32
