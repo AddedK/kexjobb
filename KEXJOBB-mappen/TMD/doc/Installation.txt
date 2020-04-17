@@ -1,13 +1,3 @@
-# Make a virtual environment
-virtualenv tmd_test
-
-# Activate the virtual environment
-. ./tmd_test/bin/activate
-
-# Install tmd module
-pip install -e TMD
-
-# Now your module is ready to use
-ipython
-# Import module
-import tmd
+version https://git-lfs.github.com/spec/v1
+oid sha256:1ace7bcc6859f7ddfd9f2ca75ac21a4cfe838d77cec600e73ec40252e23f6e43
+size 222
