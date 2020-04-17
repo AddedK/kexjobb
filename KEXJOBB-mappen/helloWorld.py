@@ -6,32 +6,40 @@ from tmd.view import view, plot
 import matplotlib.pyplot as plt
 import numpy as np
 import os
+from sklearn.cluster import AgglomerativeClustering
+from sklearn.cluster import AffinityPropagation
+import time as time
 
-directory = './basket_swc/'
+type_name = "granule"
+saved_X_filename = type_name + '_X_train.txt'
 
-tot_files = 0
-ok_files = 0
-for file in os.listdir(directory):
+X = np.loadtxt(saved_X_filename)
 
-    if file.endswith(".swc") :
-        tot_files += 1
-        try:
-            #Load your morphology
-            neu = tmd.io.load_neuron(directory + file)
 
-        except :
-            continue
-        else :
-            #plt.show(view.neuron(neu))
-            ok_files += 1
-            continue
-    else:
-        continue
+st = time.time()
+ward_labels = AgglomerativeClustering(n_clusters=8, linkage='ward').fit_predict(X)
+elapsed_time = time.time() - st
 
-print("tot " + str(tot_files))
-print("ok " + str(ok_files))
+
+print("Elapsed time: %.2fs" % elapsed_time)
+print("Number of points: %i" % ward_labels.size)
+print(ward_labels)
+
+st = time.time()
+ap_labels = AffinityPropagation().fit_predict(X)
+elapsed_time = time.time() - st
+
+print("Elapsed time: %.2fs" % elapsed_time)
+print("Number of points: %i" % ap_labels.size)
+print(ap_labels)
+
+"""
+gå igenom directory/typen
+    de första x kolumnerna i dataset matrisen kommer tillhöra typen
+    vi fyller label arrayen, de första x indexen med denna typ
+    
+"""
             
-
 
 """
 
