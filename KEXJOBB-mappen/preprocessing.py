@@ -16,15 +16,15 @@ for file in os.listdir(directory):
             # Load your morphology
             neu = tmd.io.load_neuron(directory + file)
             persistence_diagram = tmd.methods.get_ph_neuron(neu)
-            persistence_image = tmd.analysis.get_persistence_image_data(persistence_diagram)
-            i +=1
-
+            persistence_image = tmd.analysis.get_persistence_image_data(
+                persistence_diagram)
+            i += 1
         except:
             continue
         else:
+
             persistence_image_vector = persistence_image.flatten()
             X.append(persistence_image_vector)
-
             continue
     else:
         continue
@@ -32,6 +32,6 @@ for file in os.listdir(directory):
 print("Number of neurons that got through persistence image test : " + str(i))
 np.savetxt(saved_X_filename, X)
 
-#pyramidal funkar ej, gör 3:e test
+# pyramidal funkar ej, gör 3:e test
 #
 #
