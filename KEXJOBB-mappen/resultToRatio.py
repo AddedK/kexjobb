@@ -10,8 +10,8 @@ import time as time
 from collections import Counter
 
 
-apRes = np.loadtxt("resultmatrix1.txt")
-wardRes = np.loadtxt("resultmatrix2.txt")
+apRes = np.loadtxt("dim_resultmatrix1.txt")
+wardRes = np.loadtxt("dim_resultmatrix2.txt")
 
 apRatio = []
 wardRatio = []
@@ -22,5 +22,5 @@ for row in apRes:
 for row in wardRes:
     wardRatio.append(row/np.sum(row))
 
-np.savetxt("ratioMatrixAp1.txt", apRatio)
-np.savetxt("ratioMatrixWard2.txt", wardRatio)
+np.savetxt("dim_ratioMatrixAp1.txt", apRatio)
+np.savetxt("dim_ratioMatrixWard2.txt", wardRatio)

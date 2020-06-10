@@ -6,6 +6,7 @@ from tmd.view import view, plot
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn import metrics
+import sys
 import os
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.cluster import AffinityPropagation
@@ -15,7 +16,9 @@ from collections import Counter
 
 # type_name = "granule"
 # saved_X_filename = type_name + '_X_train.txt'
-saved_X_filename = 'X_train_all_types.txt'
+# saved_X_filename = 'X_train_all_types.txt'
+saved_X_filename = 'dim_reduced_data.txt'
+
 
 X = np.loadtxt(saved_X_filename)
 print(X.shape)
@@ -39,38 +42,42 @@ print(X.shape)
 # st = time.time()
 
 # Affinity propagation finding out best silhouette score -----
-dampingArray = [0.85]
+dampingArray = [0.70]
 maxIterArray = [5000]
 convIterArray = [200]
+preferenceArray = [-0.5]
 answerArray = []
 i = 0
 
 for dampingValue in dampingArray:
     for maxIterValue in maxIterArray:
         for convIterValue in convIterArray:
-            i = i + 1
-            try:
-                ward_labels = AgglomerativeClustering(
-                    n_clusters=127).fit_predict(X)
-                # ap_labels = AffinityPropagation(
-                #     max_iter=maxIterValue, damping=dampingValue, convergence_iter=convIterValue).fit_predict(X)
-                # result = metrics.silhouette_score(
-                #     X, ap_labels)
-                # answerArray.append(
-                #     (dampingValue, maxIterValue, convIterValue, result))
-                # resSamples = metrics.silhouette_samples(X, ap_labels)
-                print("done with iteration = {} ".format(i))
-            except Exception as exception:
-                print("oops one condition didn't work!")
-                print("damp {0} maxiter {1} conviter{2}".format(
-                    dampingValue, maxIterValue, convIterValue))
-                print(exception)
-                continue
-            else:
-                continue
+            for preferenceValue in preferenceArray:
+                i = i + 1
+                try:
+                    # ward_labels = AgglomerativeClustering(
+                    #     n_clusters=684).fit_predict(X)
+                    ap_labels = AffinityPropagation(
+                        max_iter=maxIterValue, damping=dampingValue, convergence_iter=convIterValue, preference=preferenceValue).fit_predict(X)
+                    result = metrics.silhouette_score(
+                        X, ap_labels)
+                    answerArray.append(
+                        (dampingValue, maxIterValue, convIterValue, preferenceValue, result))
+                    resSamples = metrics.silhouette_samples(X, ap_labels)
+                    print("done with iteration = {} ".format(i))
+                except Exception as exception:
+                    print("oops one condition didn't work!")
+                    print("damp {0} maxiter {1} conviter{2}".format(
+                        dampingValue, maxIterValue, convIterValue))
+                    print(exception)
+                    continue
+                else:
+                    continue
 
 
 print("hard exiting cluster.py after clustering")
+print(result)
+sys.exit()
 # print(max(resSamples))
 
 
@@ -113,8 +120,8 @@ for cluster in ward_labels:
     resultMatrix[cluster][labelIndex] += 1
     i = i+1
 
-np.savetxt("ward_labels.txt", ward_labels)
-np.savetxt("resultmatrix2.txt", resultMatrix)
+np.savetxt("dim_ward_labels.txt", ward_labels)
+np.savetxt("dim_resultmatrix2.txt", resultMatrix)
 
 #  ------------
 

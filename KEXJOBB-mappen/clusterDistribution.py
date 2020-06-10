@@ -8,6 +8,7 @@ import tmd
 import matplotlib.pyplot as plt
 from tmd.view.common import jet_map
 import os
+from collections import Counter
 
 
 rowCounts = []  # kommer innehålla 127 element
@@ -16,7 +17,7 @@ rowCounts = []  # kommer innehålla 127 element
 apClusterIndexes = []
 wardClusterIndexes = []
 
-with open("ap_cluster_indexes.txt") as ap_indexes:
+with open("dim_ap_cluster_indexes.txt") as ap_indexes:
     currentList = []
     for line in ap_indexes:
         # print(line)
@@ -28,7 +29,7 @@ with open("ap_cluster_indexes.txt") as ap_indexes:
             currentList = []
 
 
-with open("ward_cluster_indexes.txt") as ward_indexes:
+with open("dim_ward_cluster_indexes.txt") as ward_indexes:
     currentList = []
     for line in ward_indexes:
         # print(line)
@@ -39,7 +40,7 @@ with open("ward_cluster_indexes.txt") as ward_indexes:
             wardClusterIndexes.append(currentList)
             currentList = []
 
-rowCounts = [0] * 127
+rowCounts = [0] * 684
 
 # for i, ap_row in enumerate(apClusterIndexes):
 #     for ward_row in wardClusterIndexes:
@@ -60,14 +61,21 @@ for i, ap_row in enumerate(apClusterIndexes):
 # print(maxRatios)
 
 count = 0
+largestIndex = 0
+maximum = len(apClusterIndexes[0])
 for i, ratio in enumerate(maxRatios):
-    if ratio >= 0.5:
+    if ratio == 1:
         count += 1
         print(i)
         print(ratio)
         print(apClusterIndexes[i])
+        if(len(apClusterIndexes[i]) > maximum):
+            maximum = len(apClusterIndexes[i])
+            largestIndex = i
 print("COUNT")
 print(count)
+print("largest identical cluster")
+print(apClusterIndexes[largestIndex])
 
 
 # for i, count in enumerate(rowCounts):

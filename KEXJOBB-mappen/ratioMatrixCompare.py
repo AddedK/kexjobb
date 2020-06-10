@@ -1,10 +1,13 @@
 import numpy as np
+from collections import Counter
 
-labels = np.loadtxt("ap_labels.txt")
-labels2 = np.loadtxt("ward_labels.txt")
+labels = np.loadtxt("dim_ap_labels.txt")
+labels2 = np.loadtxt("dim_ward_labels.txt")
 
-ratioMatrix1 = np.loadtxt("ratioMatrixAp1.txt")
-ratioMatrix2 = np.loadtxt("ratioMatrixWard2.txt")
+ratioMatrix1 = np.loadtxt("dim_ratioMatrixAp1.txt")
+ratioMatrix2 = np.loadtxt("dim_ratioMatrixWard2.txt")
+
+nrOfClusters = len(Counter(labels).keys())
 
 interestingClustersNumbersAp = []
 interestingClustersNumbersWard = []
@@ -16,7 +19,7 @@ label_names = ["glutamatergic", "granule",
                "medium_spiny", "basket", "fast_spiking", "pyramidal"]
 
 
-for row, i in zip(ratioMatrix1, range(0, 126)):
+for row, i in zip(ratioMatrix1, range(0, nrOfClusters)):
     if(np.any(row > 0.8)):
         # index = np.where(np.any(row > 0.8))
         index = np.where(row > 0.8)
@@ -33,7 +36,7 @@ for row, i in zip(ratioMatrix1, range(0, 126)):
         name = label_names[index]
         pureClustersAp.append([i, name])
 
-for row, i in zip(ratioMatrix2, range(0, 128)):
+for row, i in zip(ratioMatrix2, range(0, nrOfClusters)):
     if(np.any(row > 0.8)):
         index = np.where(row > 0.8)
         index = index[0]
@@ -56,8 +59,9 @@ pureClustersAp = np.asarray(pureClustersAp)
 pureClustersWard = np.asarray(pureClustersWard)
 
 
-np.savetxt("apAboveEightyClusters.txt", interestingClustersNumbersAp, fmt='%s')
-np.savetxt("wardAboveEightyClusters.txt",
+np.savetxt("dim_apAboveEightyClusters.txt",
+           interestingClustersNumbersAp, fmt='%s')
+np.savetxt("dim_wardAboveEightyClusters.txt",
            interestingClustersNumbersWard, fmt='%s')
-np.savetxt("apPureClusters", pureClustersAp, fmt='%s', delimiter=",")
-np.savetxt("wardPureClusters", pureClustersWard, fmt='%s')
+np.savetxt("dim_apPureClusters.txt", pureClustersAp, fmt='%s')
+np.savetxt("dim_wardPureClusters.txt", pureClustersWard, fmt='%s')

@@ -2,11 +2,13 @@ from collections import Counter
 import numpy as np
 import sys
 
-labels = np.loadtxt("ap_labels.txt")
-labels2 = np.loadtxt("ward_labels.txt")
+labels = np.loadtxt("dim_ap_labels.txt")
+labels2 = np.loadtxt("dim_ward_labels.txt")
 
-resultMatrix1 = np.loadtxt("resultmatrix1.txt")
-resultMatrix2 = np.loadtxt("resultmatrix2.txt")
+resultMatrix1 = np.loadtxt("dim_resultmatrix1.txt")
+resultMatrix2 = np.loadtxt("dim_resultmatrix2.txt")
+
+nrOfClusters = len(Counter(labels).keys())
 
 
 """
@@ -37,9 +39,12 @@ sorted_cluster_numbers1 = np.array(cluster_numbers1)[idx1]
 
 
 # print(int(sorted_cluster_numbers1[0]))
-largest_cluster_nr1 = resultMatrix1[int(sorted_cluster_numbers1[126])]
-second_largest_cluster_nr1 = resultMatrix1[int(sorted_cluster_numbers1[125])]
-third_largest_cluster_nr1 = resultMatrix1[int(sorted_cluster_numbers1[124])]
+largest_cluster_nr1 = resultMatrix1[int(
+    sorted_cluster_numbers1[nrOfClusters-1])]
+second_largest_cluster_nr1 = resultMatrix1[int(
+    sorted_cluster_numbers1[nrOfClusters-2])]
+third_largest_cluster_nr1 = resultMatrix1[int(
+    sorted_cluster_numbers1[nrOfClusters-3])]
 
 
 """
@@ -67,23 +72,23 @@ print("cluster_numbers2")
 print(sorted_cluster_numbers2)
 
 
-with open("ap_cluster_indexes.txt", "wb") as f:
-    for cluster_nr in range(127):
+with open("dim_ap_cluster_indexes.txt", "wb") as f:
+    for cluster_nr in range(nrOfClusters):
         ii1 = np.where(labels == cluster_nr)[0]
         np.savetxt(f, ii1, fmt='%.5f')
         f.write(b'\n')
 
-with open("ward_cluster_indexes.txt", "wb") as f:
-    for cluster_nr in range(127):
+with open("dim_ward_cluster_indexes.txt", "wb") as f:
+    for cluster_nr in range(nrOfClusters):
         ii1 = np.where(labels2 == cluster_nr)[0]
         np.savetxt(f, ii1, fmt='%.5f')
         f.write(b'\n')
 
 
-print("ending after making cluster indexes")
-sys.exit()
+# print("ending after making cluster indexes")
+# sys.exit()
 
-print("shouldn't get here")
+# print("shouldn't get here")
 
 # largest_cluster_nr2 = resultMatrix2[int(cluster_numbers[126])]
 # second_largest_cluster_nr2 = resultMatrix2[int(cluster_numbers[125])]
@@ -105,7 +110,7 @@ label_names = ["glutamatergic", "granule", "medium_spiny",
 # we want to compare these
 
 
-for i in range(126, -1, -1):
+for i in range(nrOfClusters-1, -1, -1):
     print("ap {0} {1} original clusterNr: {2} ".format(
         i, resultMatrix1[int(sorted_cluster_numbers1[i])], sorted_cluster_numbers1[i]))
     print("ward {0} {1} original clusterNr: {2}  ".format(
@@ -113,39 +118,39 @@ for i in range(126, -1, -1):
     print("\n")
 
 print("indexes for largest clusters in ap")
-searchval = sorted_cluster_numbers1[126]
+searchval = sorted_cluster_numbers1[nrOfClusters-1]
 ii1 = np.where(labels == searchval)[0]
 print(repr(ii1))
 print(len(ii1))
 
 print("indexes for largest clusters in ward")
-searchval = sorted_cluster_numbers2[126]
+searchval = sorted_cluster_numbers2[nrOfClusters-1]
 ii2 = np.where(labels2 == searchval)[0]
 print(repr(ii2))
 print(len(ii2))
 
 
 print("indexes for 2nd largest clusters in ap")
-searchval = sorted_cluster_numbers1[125]
+searchval = sorted_cluster_numbers1[nrOfClusters-2]
 ii1 = np.where(labels == searchval)[0]
 print(repr(ii1))
 print(len(ii1))
 
 print("indexes for 2nd largest clusters in ward")
 
-searchval = sorted_cluster_numbers2[125]
+searchval = sorted_cluster_numbers2[nrOfClusters-2]
 ii2 = np.where(labels2 == searchval)[0]
 print(repr(ii2))
 print(len(ii2))
 
 print("indexes for 3rd largest clusters in ap")
-searchval = sorted_cluster_numbers1[124]
+searchval = sorted_cluster_numbers1[nrOfClusters-3]
 ii1 = np.where(labels == searchval)[0]
 print(repr(ii1))
 print(len(ii1))
 
 print("indexes for 3rd largest clusters in ward")
-searchval = sorted_cluster_numbers2[124]
+searchval = sorted_cluster_numbers2[nrOfClusters-3]
 ii2 = np.where(labels2 == searchval)[0]
 print(repr(ii2))
 print(len(ii2))
@@ -153,15 +158,15 @@ print(len(ii2))
 # print("exiting")
 # sys.exit()
 
-apPureClusters = np.loadtxt("apPureClusters.txt", usecols=0)
-wardPureClusters = np.loadtxt("wardPureClusters.txt", usecols=0)
+apPureClusters = np.loadtxt("dim_apPureClusters.txt", usecols=0)
+wardPureClusters = np.loadtxt("dim_wardPureClusters.txt", usecols=0)
 
 
 apPureIndexes = []
 wardPureIndexes = []
 # print("indexes for pure clusters in both methods")
 
-with open("apPureClusterIndexes.txt", "wb") as f:
+with open("dim_apPureClusterIndexes.txt", "wb") as f:
     for row in apPureClusters:
         searchval = row
         ii1 = np.where(labels == searchval)[0]
@@ -172,7 +177,7 @@ with open("apPureClusterIndexes.txt", "wb") as f:
         # print(len(ii1))
 
 
-with open("wardPureClusterIndexes.txt", "wb") as f:
+with open("dim_wardPureClusterIndexes.txt", "wb") as f:
     for row in wardPureClusters:
         searchval = row
         ii2 = np.where(labels == searchval)[0]
