@@ -64,7 +64,6 @@ for i, ap_row in enumerate(apClusterIndexes):
 
 
 count = 0
-largestIndex = 0
 for i, ratio in enumerate(maxRatios):
     if ratio == 1:
         count += 1
