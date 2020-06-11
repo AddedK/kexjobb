@@ -9,6 +9,12 @@ from tmd.view.common import jet_map
 import os
 
 
+"""
+
+CHECKS HOW MANY PURE CLUSTERS THERE ARE FOR EACH NEURON TYPE
+
+"""
+
 wardPureClusters = np.genfromtxt(
     "dim_wardPureClusters.txt", usecols=1, dtype="str")
 
@@ -17,7 +23,6 @@ wardPureClusterIndexes = []
 with open("dim_wardPureClusterIndexes.txt") as f:
     currentList = []
     for line in f:
-        # print(line)
         if(line != "\n"):
             line = line[:-1]
             currentList.append(float(line))
@@ -34,7 +39,6 @@ for i, cluster in enumerate(wardPureClusterIndexes):
     if len(cluster) > 1:
         neuroMorphoName = wardPureClusters[i]
         index = label_names.index(neuroMorphoName)
-        # print(index)
         typeDistribution[index] += 1
 
 
