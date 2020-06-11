@@ -66,16 +66,6 @@ resultMatrix = np.zeros((nr_clusters, 6))
 current_neuron_count = neurons_per_type[0]
 current_neuron_count += current_neuron_count[i]
 
-i = 1
-labelIndex = 0
-current_neuron_count = 0
-for cluster in ward_labels:
-    for index,nr_neurons in enumerate(neurons_per_type): 
-        current_neuron_count += nr_neurons
-        if i <= current_neuron_count:
-            labelIndex = index
-        resultMatrix[cluster][labelIndex] += 1
-        i = i+1
 
 i = 1
 labelIndex = 0
