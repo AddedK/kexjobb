@@ -1,4 +1,10 @@
-# Step 1: Import the tmd module
+"""
+SCREENING FOR SWC FILES THAT WORK WITH THE TMD ALGORITHM
+ONLY ACCEPTS COMPLETE NEURON RECONSTRUCTIONS 
+PERSISTENCE IMAGES ARE CREATED FOR THE SWC FILES THAT PASS THE SCREENING
+VALUES FOR THE PERSISTENCE IMAGES ARE STORED ROW-WISE IN A SEPARATE FILE "pyramidal_X_train.txt"
+E.G FOR PYRAMIDAL NEURON TYPE
+"""
 import tmd
 import numpy as np
 import os
@@ -32,6 +38,3 @@ for file in os.listdir(directory):
 print("Number of neurons that got through persistence image test : " + str(i))
 np.savetxt(saved_X_filename, X)
 
-# pyramidal funkar ej, gör 3:e test
-#
-#
